@@ -1,0 +1,159 @@
+.app-shell {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #f3f6fb;
+  padding: 32px 16px;
+}
+
+.app-card {
+  width: min(960px, 100%);
+  background: #fff;
+  border: 1px solid #dfe7f2;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(16, 24, 40, 0.06);
+  padding: 24px;
+}
+
+h1 {
+  margin: 0 0 8px;
+  text-align: center;
+  font-size: 2rem;
+}
+
+.bucket-name,
+.warning {
+  margin: 0 0 20px;
+  text-align: center;
+  font-size: 0.95rem;
+}
+
+.warning {
+  color: #a14d00;
+}
+
+.status {
+  margin-bottom: 16px;
+  padding: 10px 12px;
+  border-radius: 8px;
+  font-weight: 600;
+}
+
+.status.success {
+  background: #e9f9ee;
+  color: #0c6b3b;
+}
+
+.status.error {
+  background: #fdeceb;
+  color: #b42318;
+}
+
+.upload-row {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-bottom: 16px;
+}
+
+.file-picker {
+  display: inline-flex;
+  align-items: center;
+  min-width: 220px;
+  flex: 1;
+  border: 1px solid #cdd8ea;
+  border-radius: 8px;
+  padding: 10px 12px;
+  background: #f9fbff;
+  cursor: pointer;
+}
+
+.file-picker input {
+  display: none;
+}
+
+button {
+  background: #0f6fff;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 10px 16px;
+  font-size: 0.95rem;
+  cursor: pointer;
+}
+
+button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+button.danger {
+  background: #d92d20;
+}
+
+.refresh-btn {
+  margin-bottom: 20px;
+}
+
+.file-table-wrap {
+  overflow-x: auto;
+}
+
+.section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.section-header h3 {
+  margin: 0;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 8px;
+}
+
+th, td {
+  padding: 12px 10px;
+  border-bottom: 1px solid #edf2f7;
+  text-align: left;
+  vertical-align: middle;
+}
+
+th {
+  background: #f8faff;
+  font-size: 0.9rem;
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.actions button {
+  padding: 8px 10px;
+  font-size: 0.8rem;
+}
+
+@media (max-width: 640px) {
+  .app-card {
+    padding: 18px 14px;
+  }
+
+  .upload-row,
+  .section-header {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  th,
+  td {
+    padding: 10px 8px;
+    font-size: 0.82rem;
+  }
+}
