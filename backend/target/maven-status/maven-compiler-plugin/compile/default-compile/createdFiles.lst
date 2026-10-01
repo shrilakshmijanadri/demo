@@ -1,5 +1,0 @@
-com\example\s3lambda\S3Controller.class
-com\example\s3lambda\S3Controller$UploadResponse.class
-com\example\s3lambda\S3Controller$FileInfo.class
-com\example\s3lambda\S3LambdaBackendApplication.class
-com\example\s3lambda\S3Controller$DeleteResponse.class

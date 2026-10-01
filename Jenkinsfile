@@ -20,17 +20,15 @@ pipeline {
 
         stage('Build Frontend Webpack') {
             steps {
-                dir('frontend') {
-                    bat 'npm install'
-                    bat 'npm run build'
-                }
+                bat 'npm install'
+                bat 'npm run build'
             }
         }
 
         stage('Build Docker Image') {
             steps {
                 script {
-                    bat "docker build -t ${ECR_REGISTRY}/${IMAGE_NAME}:${IMAGE_TAG} ./frontend"
+                    bat "docker build -t ${ECR_REGISTRY}/${IMAGE_NAME}:${IMAGE_TAG} ."
                 }
             }
         }
